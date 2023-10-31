@@ -4,7 +4,7 @@ services:
     cs371-django:
         build:
             context: .
-            dockerfile: ./docker/django/Dockerfile
+            dockerfile: ./Docker/django/Dockerfile
         container_name: cs371-django
         depends_on:
             - cs371-postgresql
@@ -24,7 +24,7 @@ services:
                         memory: 1024M
         build:
             context: ./
-            dockerfile: ./docker/vue/Dockerfile
+            dockerfile: ./Docker/vue/Dockerfile
         depends_on:
             - cs371-django
         ports:
