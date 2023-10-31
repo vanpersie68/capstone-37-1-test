@@ -14,7 +14,7 @@ services:
             - 8000
         restart: always
 
-    cs373-vue:
+    cs371-vue:
         environment:
             - VUE_APP_SERVER=http://170.64.174.169/api/
         container_name: cs371-vue
@@ -34,7 +34,7 @@ services:
         volumes:
             - ./docker/vue/nginx.conf:/etc/nginx/sites-available/default
 
-    cs373-postgresql:
+    cs371-postgresql:
         image: postgres:latest
         container_name: cs371-postgresql
         restart: always
